@@ -1,0 +1,155 @@
+
+.pagina-produtos {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  text-align: center;
+}
+
+.busca-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  max-width: 900px;
+  margin: 1rem auto 2rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.lupa {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.8rem 1.2rem 0.8rem 2.8rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border: 1px solid #d63384;
+  box-shadow: 0 0 0 4px rgba(214, 51, 132, 0.2);
+}
+
+.filtro-categoria {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: #fff9f3;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+
+.mensagem-vazia {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 2rem;
+}
+
+
+.mensagem-vazia {
+  font-size: 1.5rem;
+  color: #d63384;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px dashed #d63384;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: inline-block;
+  margin-top: 2rem;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+
+.mensagem-vazia {
+  font-size: 1.5rem;
+  color: #fffacd;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px dashed #fffacd;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: inline-block;
+  margin-top: 2rem;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+
+.grid-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.grid-produtos:has(.mensagem-vazia) {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.mensagem-vazia {
+  font-size: 1.5rem;
+  color: #fffacd;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px dashed #fffacd;
+  padding: 1.2rem 2rem;
+  border-radius: 15px;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: pulse 1.5s infinite alternate;
+  display: inline-block;
+  margin-top: 3rem;
+  text-align: center;
+}
